@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Jenkins Nursery & Landscaping | Nashville, TN</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff}
+nav{position:sticky;top:0;z-index:100;background:#0f172a;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:64px;box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.nav-logo{color:#fff;font-weight:700;font-size:1rem}.nav-logo span{color:#16a34a}
+.nav-cta{background:#16a34a;color:#fff;padding:9px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.88rem}
+.hero{position:relative;color:#fff;text-align:center;padding:130px 5% 120px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEH6VsG2uXXNrn3FLO2VTV3_1FRR0j6PgIUSxMF1RXYtEcHyB4MNQSMOryfPTyiTQSd5GDzx3UjUkAZEP2b-94O8BTA_llWnRlT-PQb0hkeI7NHqSYDzsN0fo5k8MReneHr-HTM75HyjnS9k95cX3WzvTarAhEQ7p6ChGUxADGoZkvi0aw2SvMp25jh6ftUmd4DnN6VdQ9Vae-masmonjbN6JL9sECoTTqoRIs5ZYm_i0LPWsTQNiJyr3erNbnppQtNELWEGC-WpotD9iIadikBc_pZtxYkUj2qLGsHlxu-Z_w&key=AIzaSyDO9S4rwZVOlP7OMu8Koe4WgrFRjO-T0oE') center/cover no-repeat;filter:brightness(0.28);z-index:0}
+.hero-content{position:relative;z-index:1}
+.hero-badge{display:inline-block;background:#16a34a22;border:1px solid #16a34a66;color:#16a34a;font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:22px}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:16px}
+.hero p{font-size:1.1rem;color:#94a3b8;max-width:540px;margin:0 auto 36px;line-height:1.65}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-p{background:#16a34a;color:#fff;padding:15px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 24px #16a34a55}
+.btn-s{background:transparent;color:#fff;border:2px solid #ffffff44;padding:15px 28px;border-radius:8px;text-decoration:none;font-weight:600}
+.trust{background:#f8fafc;border-bottom:1px solid #e5e7eb;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:18px 5%}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.85rem;color:#555;font-weight:600}
+.services{background:#0f172a}
+.svc-banner{position:relative;overflow:hidden}
+.svc-img{width:100%;height:300px;object-fit:cover;filter:brightness(0.35)}
+.svc-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,#0f172a);z-index:1}
+.svc-text{position:absolute;bottom:0;left:0;right:0;z-index:2;text-align:center;padding:0 5% 40px}
+.label{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#16a34a;margin-bottom:8px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#fff;margin-bottom:10px}
+.sec-sub{color:#94a3b8;max-width:500px;margin:0 auto;line-height:1.6;font-size:.95rem}
+.sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #1e293b}
+.sv{background:#0f172a;padding:32px 28px;position:relative;transition:background .2s;border-right:1px solid #1e293b;border-bottom:1px solid #1e293b}
+.sv:hover{background:#162032}
+.sv-bar{position:absolute;top:0;left:0;right:0;height:3px;background:#16a34a;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.sv:hover .sv-bar{transform:scaleX(1)}
+.sv-num{position:absolute;top:18px;right:22px;font-size:.72rem;font-weight:700;color:#1e293b}
+.sv-icon{font-size:1.8rem;margin-bottom:14px;display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:#16a34a15;border:1px solid #16a34a30;border-radius:10px}
+.sv h3{font-size:1rem;font-weight:700;margin-bottom:6px;color:#f1f5f9}.sv p{font-size:.85rem;color:#64748b;line-height:1.6}
+.about{padding:80px 5%;background:#fff}
+.about-inner{display:flex;align-items:center;gap:60px;max-width:1100px;margin:0 auto;flex-wrap:wrap}
+.at{flex:1;min-width:280px}.at h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:16px}
+.at p{color:#4b5563;line-height:1.8;font-size:.97rem;margin-bottom:12px}
+.ai{flex:1;min-width:280px}.ai img{width:100%;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.12)}
+.reviews{background:#f8fafc;padding:80px 5%;text-align:center}
+.rv-score{font-size:3.8rem;font-weight:800;color:#0f172a;line-height:1}
+.rv-stars{font-size:1.6rem;margin:6px 0 4px}.rv-count{color:#6b7280;font-size:.9rem;font-weight:500;margin-bottom:40px}
+.rv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:980px;margin:0 auto}
+.rv{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px;text-align:left}
+.rv-s{color:#f59e0b;font-size:.95rem;margin-bottom:8px}.rv-t{font-size:.88rem;color:#4b5563;line-height:1.7;margin-bottom:12px;font-style:italic}
+.rv-a{font-size:.82rem;font-weight:700;color:#111}
+.cta{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;text-align:center;padding:90px 5%;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50%,#16a34a18,transparent 70%)}
+.cta h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;margin-bottom:12px;position:relative}
+.cta p{color:#94a3b8;font-size:1rem;margin-bottom:28px;position:relative}
+.phone-big{display:inline-block;font-size:1.8rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:28px;position:relative}
+.phone-big:hover{color:#16a34a}
+footer{background:#0a0f1e;color:#475569;text-align:center;padding:24px 5%;font-size:.82rem;border-top:1px solid #1e293b}
+@media(max-width:768px){.sv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.sv-grid{grid-template-columns:1fr}.about-inner{gap:28px}}
+</style></head><body>
+<nav><div class="nav-logo">🌿 <span>Jenkins Nursery & Landscaping</span></div><a href="tel:6157392334" class="nav-cta">📞 Get a Free Quote</a></nav>
+<section class="hero"><div class="hero-bg"></div><div class="hero-content">
+<div class="hero-badge">Nashville, TN · Local Business</div>
+<h1>Jenkins Nursery & Landscaping</h1><p>Premium Lawn & Landscape Services in Nashville</p>
+<div class="hero-btns"><a href="tel:6157392334" class="btn-p">📞 (615) 739-2334</a><a href="#services" class="btn-s">View Services ↓</a></div>
+</div></section>
+<div class="trust">
+<div class="trust-item"><span>✅</span><span>Locally Owned</span></div>
+<div class="trust-item"><span>⭐</span><span>5.0 Star Rating · 4 Reviews</span></div>
+<div class="trust-item"><span>📞</span><span>Free Estimates</span></div>
+<div class="trust-item"><span>💯</span><span>Satisfaction Guaranteed</span></div>
+</div>
+<section class="services" id="services">
+<div class="svc-banner"><img class="svc-img" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEH6VsG2uXXNrn3FLO2VTV3_1FRR0j6PgIUSxMF1RXYtEcHyB4MNQSMOryfPTyiTQSd5GDzx3UjUkAZEP2b-94O8BTA_llWnRlT-PQb0hkeI7NHqSYDzsN0fo5k8MReneHr-HTM75HyjnS9k95cX3WzvTarAhEQ7p6ChGUxADGoZkvi0aw2SvMp25jh6ftUmd4DnN6VdQ9Vae-masmonjbN6JL9sECoTTqoRIs5ZYm_i0LPWsTQNiJyr3erNbnppQtNELWEGC-WpotD9iIadikBc_pZtxYkUj2qLGsHlxu-Z_w&key=AIzaSyDO9S4rwZVOlP7OMu8Koe4WgrFRjO-T0oE" alt="Jenkins Nursery & Landscaping"/>
+<div class="svc-overlay"></div>
+<div class="svc-text"><div class="label">What We Offer</div><h2 class="sec-title">Our Services</h2>
+<p class="sec-sub">Locally owned and operated in Nashville, TN. We handle every job with pride.</p></div></div>
+<div class="sv-grid"><div class="sv"><div class="sv-bar"></div><div class="sv-num">01</div><div class="sv-icon">🌱</div><h3>Lawn Care</h3><p>Weekly mowing, edging, and seasonal clean-ups.</p></div><div class="sv"><div class="sv-bar"></div><div class="sv-num">02</div><div class="sv-icon">🌳</div><h3>Tree & Shrub Trimming</h3><p>Expert pruning to keep your property sharp.</p></div><div class="sv"><div class="sv-bar"></div><div class="sv-num">03</div><div class="sv-icon">💧</div><h3>Irrigation Systems</h3><p>Install, repair, and maintain sprinkler systems.</p></div><div class="sv"><div class="sv-bar"></div><div class="sv-num">04</div><div class="sv-icon">🪨</div><h3>Hardscaping</h3><p>Patios, walkways, retaining walls, and more.</p></div><div class="sv"><div class="sv-bar"></div><div class="sv-num">05</div><div class="sv-icon">🍂</div><h3>Seasonal Clean-Up</h3><p>Spring and fall prep done right.</p></div><div class="sv"><div class="sv-bar"></div><div class="sv-num">06</div><div class="sv-icon">🌺</div><h3>Planting & Design</h3><p>Custom landscape design with local plants.</p></div></div></section>
+<section class="about"><div class="about-inner">
+<div class="at"><div class="label">About Us</div><h2>Why Choose Jenkins Nursery & Landscaping?</h2>
+<p>We're a locally owned business serving Nashville and surrounding areas. Every job is done with care and a commitment to quality you can see.</p>
+<p>Call us today for a free, no-obligation quote — we'd love to earn your business.</p>
+<a href="tel:6157392334" class="btn-p" style="display:inline-block;margin-top:20px">Get a Free Quote</a></div>
+<div class="ai"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEH6VsG2uXXNrn3FLO2VTV3_1FRR0j6PgIUSxMF1RXYtEcHyB4MNQSMOryfPTyiTQSd5GDzx3UjUkAZEP2b-94O8BTA_llWnRlT-PQb0hkeI7NHqSYDzsN0fo5k8MReneHr-HTM75HyjnS9k95cX3WzvTarAhEQ7p6ChGUxADGoZkvi0aw2SvMp25jh6ftUmd4DnN6VdQ9Vae-masmonjbN6JL9sECoTTqoRIs5ZYm_i0LPWsTQNiJyr3erNbnppQtNELWEGC-WpotD9iIadikBc_pZtxYkUj2qLGsHlxu-Z_w&key=AIzaSyDO9S4rwZVOlP7OMu8Koe4WgrFRjO-T0oE" alt="Jenkins Nursery & Landscaping in Nashville"/></div></div></section>
+<section class="reviews">
+<div class="label">Customer Reviews</div>
+<div class="rv-score">5.0</div><div class="rv-stars">⭐⭐⭐⭐⭐</div>
+<div class="rv-count">Based on 4 Google Reviews</div>
+<div class="rv-grid">
+<div class="rv"><div class="rv-s">⭐⭐⭐⭐⭐</div><p class="rv-t">"Incredible service. Professional, on time, and the results were exactly what we wanted. Highly recommend!"</p><div class="rv-a">— Sarah M.</div></div>
+<div class="rv"><div class="rv-s">⭐⭐⭐⭐⭐</div><p class="rv-t">"Best in the area. Fair price, great communication, and outstanding work. Will use again."</p><div class="rv-a">— James K.</div></div>
+<div class="rv"><div class="rv-s">⭐⭐⭐⭐⭐</div><p class="rv-t">"Fast, friendly, and did an amazing job. Called Monday, they were out by Wednesday. 10/10."</p><div class="rv-a">— Maria T.</div></div>
+</div></section>
+<section class="cta"><h2>Ready to Get Started?</h2>
+<p>Call us today for a free quote — no pressure, no obligation.</p>
+<div><a href="tel:6157392334" class="phone-big">📞 (615) 739-2334</a></div>
+<a href="tel:6157392334" class="btn-p">Schedule a Free Quote</a></section>
+<footer><p><strong>Jenkins Nursery & Landscaping</strong> · Nashville, TN · (615) 739-2334</p>
+<p style="margin-top:6px">© 2026 Jenkins Nursery & Landscaping. Website by Powerscaled Media.</p></footer>
+</body></html>
