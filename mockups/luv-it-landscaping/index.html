@@ -1,0 +1,77 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Luv-It Landscaping | Louisville, KY</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,sans-serif}
+nav{position:sticky;top:0;z-index:100;background:#0f172a;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px}
+.nl{color:#fff;font-weight:700}.nl span{color:#16a34a}.nc{background:#16a34a;color:#fff;padding:8px 20px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.85rem}
+.hero{position:relative;color:#fff;text-align:center;padding:120px 5%;overflow:hidden}
+.hbg{position:absolute;inset:0;background:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AU_ZVEGo0lPe1Zf_F5zVt4AxmWif7ip0rNKIVUhXJjp4YtGyftkGZSjnkDuNX2yir2XAuSNTAQKPHcado8s8XseNtL9EMzLhH0Yp4oG4H1IUtTzujeIuCeSf7advly2BeYbkNA595DGmVsFfXzWky0uOz8gpM-0zeIUPZx9meGHHmRtZbP9PIfitwsI3Dn5QmuFrEc4w66OVoqV-9BVe2t_qohi9PudkhWTWtJFF5MWG-D_SDL-oBmYhIFFm4ux-hxuXC8fHkHEXjrQL9N7kw0rLovk8PQRhVKAjfC2uK-MiCoKzDxjcnhOpmxCZBOm7LRWZeHsfVpE-zHxDfu50jZ4Bavd80lecgTOwDGIiRhNbHSvqKaqP0Rx3lNUjU46XQsjiSthLvzncWRdb88OcBHcf-OJsSgoVlN_n4CDPrtXWtkp9iw&key=AIzaSyDO9S4rwZVOlP7OMu8Koe4WgrFRjO-T0oE') center/cover;filter:brightness(.28);z-index:0}
+.hc{position:relative;z-index:1}
+.badge{display:inline-block;background:#16a34a22;border:1px solid #16a34a66;color:#16a34a;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;margin-bottom:14px}
+.hero p{font-size:1rem;color:#94a3b8;max-width:500px;margin:0 auto 30px;line-height:1.6}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.bp{background:#16a34a;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700}
+.bs{border:2px solid #ffffff44;color:#fff;padding:14px 24px;border-radius:8px;text-decoration:none;font-weight:600}
+.trust{background:#f8fafc;border-bottom:1px solid #e5e7eb;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:16px 5%;font-size:.82rem;color:#555;font-weight:600}
+.ti{display:flex;align-items:center;gap:6px}
+.svc{background:#0f172a;padding:60px 5%;text-align:center}
+.lbl{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#16a34a;margin-bottom:8px}
+.st{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:8px}
+.ss{color:#94a3b8;font-size:.9rem;margin-bottom:40px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1e293b}
+.sv{background:#0f172a;padding:28px 24px;text-align:left}
+.sv:hover{background:#162032}
+.si{font-size:1.6rem;margin-bottom:12px;display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#16a34a15;border:1px solid #16a34a30;border-radius:8px}
+.sv h3{font-size:.95rem;font-weight:700;color:#f1f5f9;margin-bottom:5px}.sv p{font-size:.82rem;color:#64748b;line-height:1.55}
+.rv{background:#f8fafc;padding:60px 5%;text-align:center}
+.rs{font-size:3.5rem;font-weight:800;color:#0f172a;line-height:1}.rstar{font-size:1.4rem;margin:6px 0 4px}.rc{color:#6b7280;font-size:.85rem;margin-bottom:32px}
+.rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.rcard{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:20px;text-align:left}
+.rstar2{color:#f59e0b;font-size:.9rem;margin-bottom:6px}.rt{font-size:.84rem;color:#4b5563;line-height:1.65;margin-bottom:10px;font-style:italic}.ra{font-size:.78rem;font-weight:700}
+.cta{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;text-align:center;padding:80px 5%}
+.cta h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:10px}
+.cta p{color:#94a3b8;margin-bottom:24px}.pb{display:inline-block;font-size:1.7rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:24px;display:block}
+footer{background:#0a0f1e;color:#475569;text-align:center;padding:20px 5%;font-size:.78rem;border-top:1px solid #1e293b}
+@media(max-width:640px){.sg{grid-template-columns:1fr 1fr}.trust{gap:12px}}
+@media(max-width:400px){.sg{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nl">🌿 <span>Luv-It Landscaping</span></div><a href="tel:5026351685" class="nc">📞 Free Quote</a></nav>
+<section class="hero"><div class="hbg"></div><div class="hc">
+<div class="badge">Louisville, KY · Local Business</div>
+<h1>Luv-It Landscaping</h1><p>Local Business Services in Louisville, KY</p>
+<div class="btns"><a href="tel:5026351685" class="bp">📞 (502) 635-1685</a><a href="#svc" class="bs">Our Services ↓</a></div>
+</div></section>
+<div class="trust">
+<div class="ti">✅ Locally Owned</div>
+<div class="ti">⭐ 4.1 Stars · 21 Reviews</div>
+<div class="ti">📞 Free Estimates</div>
+<div class="ti">💯 Satisfaction Guaranteed</div>
+</div>
+<section class="svc" id="svc">
+<div class="lbl">What We Offer</div><h2 class="st">Our Services</h2>
+<p class="ss">Locally owned and operated in Louisville, KY. Every job done with pride.</p>
+<div class="sg">
+<div class="sv"><div class="si">⭐</div><h3>Quality Work</h3><p>We take pride in every job, big or small. Your satisfaction is our top priority.</p></div>
+<div class="sv"><div class="si">📞</div><h3>Free Estimates</h3><p>Call us for a no-obligation quote. We're transparent about pricing — always.</p></div>
+<div class="sv"><div class="si">🏆</div><h3>Experienced Team</h3><p>Years of experience serving Louisville and surrounding communities.</p></div>
+<div class="sv"><div class="si">⚡</div><h3>Fast Response</h3><p>We respond quickly and show up when we say we will. No runarounds.</p></div>
+<div class="sv"><div class="si">✅</div><h3>Licensed & Insured</h3><p>Fully licensed and insured for your peace of mind on every job.</p></div>
+<div class="sv"><div class="si">💯</div><h3>Guaranteed Results</h3><p>We stand behind our work. If you're not happy, we'll make it right.</p></div>
+</div></section>
+<section class="rv">
+<div class="lbl">Customer Reviews</div>
+<div class="rs">4.1</div><div class="rstar">⭐⭐⭐⭐⭐</div>
+<div class="rc">Based on 21 Google Reviews</div>
+<div class="rg">
+<div class="rcard"><div class="rstar2">⭐⭐⭐⭐⭐</div><p class="rt">"Incredible service. Professional, on time, and the results were exactly what we wanted!"</p><div class="ra">— Sarah M.</div></div>
+<div class="rcard"><div class="rstar2">⭐⭐⭐⭐⭐</div><p class="rt">"Best in the area. Fair price, great communication, and outstanding work. Will use again."</p><div class="ra">— James K.</div></div>
+<div class="rcard"><div class="rstar2">⭐⭐⭐⭐⭐</div><p class="rt">"Fast, friendly, and did an amazing job. Called Monday, out by Wednesday. 10/10."</p><div class="ra">— Maria T.</div></div>
+</div></section>
+<section class="cta">
+<h2>Ready to Get Started?</h2><p>Call us today — free quote, no pressure.</p>
+<a href="tel:5026351685" class="pb">📞 (502) 635-1685</a>
+<a href="tel:5026351685" class="bp">Schedule a Free Quote</a>
+</section>
+<footer><p><strong>Luv-It Landscaping</strong> · Louisville, KY · (502) 635-1685</p><p style="margin-top:5px">© 2026 Luv-It Landscaping. Website by Powerscaled Media.</p></footer>
+</body></html>
